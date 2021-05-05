@@ -1,0 +1,43 @@
+//Pipeline declarativo
+pipeline {
+    
+    // Ejecutar desde cualquier agente (nodo) disponible
+    agent any
+    
+    //Fases
+    stages {
+        
+        stage('Fase 1 - Build') {
+            // Pasos de la fase
+            steps {
+            echo "fase 1 paso 1..."
+            }
+        }
+        
+    
+    
+      
+        
+        stage('Fase 2 - Testing') {
+            // Pasos de la fase
+            steps {
+            echo "fTest Unitarios"
+            echo "Test Integración"
+            echo "Test Aceptación"
+            }
+        }
+        
+          
+        
+        stage('Fase 3 - Deploy') {
+            // Pasos de la fase
+            steps {
+            echo "Desplegando aretfacto"
+            }
+            }
+        
+    }
+}
+        
+    
+    
